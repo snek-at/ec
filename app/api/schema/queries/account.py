@@ -6,10 +6,9 @@ from flask_graphql_auth import query_jwt_required
 
 @query_jwt_required
 def resolve_account(root, info, **kwargs):
-    id = kwargs.get("id", None)
     username = kwargs.get("username", None)
 
-    accounts = AccountModel.objects(id=id, username=username)
+    accounts = AccountModel.objects(username=username)
 
     if accounts.first() is None:
         return ResponseMessageField(is_success=False, message="Not found")
