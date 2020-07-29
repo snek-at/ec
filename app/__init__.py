@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_graphql_auth import GraphQLAuth
 from app.api import API
+from app.api.model import AccountModel
 
 
 def create_app(*config_cls):
@@ -17,5 +18,7 @@ def create_app(*config_cls):
 
     API(app)
     GraphQLAuth(app)
+
+    AccountModel(id="0", username="service", password="XXX").save()
 
     return app
