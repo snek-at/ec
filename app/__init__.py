@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_graphql_auth import GraphQLAuth
 from app.api import API
 
 
@@ -15,5 +16,6 @@ def create_app(*config_cls):
     )
 
     API(app)
+    GraphQLAuth(app)
 
     return app
