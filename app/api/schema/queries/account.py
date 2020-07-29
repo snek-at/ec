@@ -20,4 +20,3 @@ def resolve_account(root, info, **kwargs):
         )
         for account in accounts
     ]
-

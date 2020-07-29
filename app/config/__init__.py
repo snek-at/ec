@@ -6,4 +6,3 @@ class Config:
     SERVICE_NAME = "flask-graphql-template"
 
     RUN_SETTING = {"host": HOST, "port": 80, "debug": DEBUG}
-

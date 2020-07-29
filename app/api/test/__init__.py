@@ -12,4 +12,3 @@ class BasicTestCase(unittest.TestCase):
 
         app.testing = True
         self.tester = app.test_client(self)
-

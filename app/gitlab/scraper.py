@@ -84,4 +84,3 @@ class GitLabScraper:
 
     def get_my_groups(self):
         return self.get_all_pages("/groups?membership=true")
-

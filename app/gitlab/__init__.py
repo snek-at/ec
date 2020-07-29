@@ -20,4 +20,3 @@ def buildUser(url, token):
         ]
 
     return user
-
