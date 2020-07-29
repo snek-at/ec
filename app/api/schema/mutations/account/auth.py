@@ -54,4 +54,3 @@ class RefreshMutation(graphene.Mutation):
                 message="Refresh success",
             )
         )
-

@@ -1,7 +1,7 @@
 from mongoengine import connect
 
+
 from app.api.model.account import AccountModel
-from app.api.model.post import PostModel, CommentModel
 
 
 class Mongo:
@@ -11,4 +11,3 @@ class Mongo:
         connect(**settings)
 
         print("[INFO] MongoEngine initialized with {}".format(settings))
-
