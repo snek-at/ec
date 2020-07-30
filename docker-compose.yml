@@ -1,0 +1,9 @@
+version: "2"
+services:
+  web:
+    build: .
+    environment:
+      - CONNECTOR_TOKEN=XXXXXXXXXXXX
+      - JWT_SECRET_KEY=XXXXXXXXXXXX
+    ports:
+      - "5000:5000"
