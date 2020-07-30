@@ -1,5 +1,5 @@
-# This file is a template, and might need editing before it works on your project.
-FROM python:3.6-alpine
+# Use the Python3.7.2 image
+FROM python:3.7.3-stretch
 
 # Edit with mysql-client, postgresql-client, sqlite3, etc. for your needs.
 # Or delete entirely if not needed.
@@ -7,14 +7,14 @@ FROM python:3.6-alpine
 
 WORKDIR /usr/src/app
 
-COPY requirements.txt /usr/src/app
+COPY . /usr/src/app
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . /usr/src/app
+
 
 # For Flask
 EXPOSE 5000
-CMD ["python", "run.py"]
+CMD ["python", "run.py"] 
 
 # For some other command
 # CMD ["python", "app.py"]
