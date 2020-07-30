@@ -1,3 +1,4 @@
+import os
 from app.config import Config
 
 
@@ -8,4 +9,4 @@ class DevConfig(Config):
 
     MONGODB_SETTINGS = {"db": Config.SERVICE_NAME, "host": "mongomock://localhost"}
 
-    JWT_SECRET_KEY = "XXXXXX"
+    JWT_SECRET_KEY = os.getenv("JWT_SECRET_KEY")
