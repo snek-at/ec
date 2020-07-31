@@ -1,4 +1,4 @@
-# Use the Python3.7.2 image
+# Use the Python3.7.3 image
 FROM python:3.7.3-stretch
 
 # Edit with mysql-client, postgresql-client, sqlite3, etc. for your needs.
