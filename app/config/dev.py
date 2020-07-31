@@ -7,6 +7,8 @@ class DevConfig(Config):
 
     RUN_SETTING = {"host": Config.HOST, "port": 5000, "debug": DEBUG}
 
-    MONGODB_SETTINGS = {"db": Config.SERVICE_NAME, "host": "mongomock://localhost"}
+    CONNECTOR_SETTINGS = {}
 
-    JWT_SECRET_KEY = os.getenv("JWT_SECRET_KEY")
+    # Secrets
+    JWT_SECRET_KEY = os.getenv("JWT_SECRET_KEY", "XXXXXXXXXXXX")
+    CONNECTOR_TOKEN = os.getenv("CONNECTOR_TOKEN", "XXXXXXXXXXXX")

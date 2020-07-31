@@ -2,6 +2,7 @@ import graphene
 import os
 from gql import gql, Client
 from gql.transport.requests import RequestsHTTPTransport
+from flask import current_app
 
 from app.api.schema.unions.mutation import ResponseUnion
 from app.api.schema.fields import ResponseMessageField
@@ -18,7 +19,7 @@ class PublishCompanyPageMutation(graphene.Mutation):
     def mutate(cls, _, info, token, page):
         print(token, page)
 
-        if token == os.getenv("CONNECTOR_TOKEN", None):
+        if token == current_app.config["CONNECTOR_TOKEN"]:
             # Select your transport with a defined url endpoint
 
             transport = RequestsHTTPTransport(
