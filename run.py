@@ -6,7 +6,7 @@ from app.config.dev import Config, DevConfig
 from app.gitlab import buildUser
 
 if __name__ == "__main__":
-    if not os.getenv("PRODUCTION", False):
+    if os.getenv("PRODUCTION") == "True":
         app = create_app(DevConfig)
     else:
         app = create_app(Config)
